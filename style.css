@@ -1,0 +1,438 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Source+Code+Pro&display=swap");
+
+.jumbotron {
+  padding-top: 50px;
+}
+
+nav.sticky {
+  padding-bottom: 15px;
+  background-color: #2070f2;
+  border-bottom: solid black 2px;
+}
+
+nav.glass {
+  background: rgba(32, 112, 242, 0.6);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(50.1px);
+  -webkit-backdrop-filter: blur(50.1px);
+}
+
+nav#navbar {
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  opacity: 90%;
+  transition: 1s;
+}
+
+nav ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  position: relative;
+}
+
+h1 {
+  padding-top: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* h1 .box {
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  background-color: rgba(255, 9, 0, 0.5);
+  height: 1vw;
+  z-index: -1;
+  width: 90px;
+} */
+
+h1 .hi {
+  display: inline-block;
+}
+
+/* #about1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 120px;
+  background-color: #2ecc71;
+  border-radius: 2px;
+} */
+
+section {
+  padding-top: 1.8rem;
+}
+
+body {
+  background-color: #309fef;
+  overflow-x: hidden;
+}
+
+#holder {
+  overflow-x: hidden;
+  position: relative;
+  left: -20px;
+}
+
+.card,
+.card-header,
+.card-body,
+.card-footer,
+.card img {
+  border-radius: 15px !important;
+}
+
+/* .rotate {
+  transform: rotate(180deg);
+  transition: all 0.5s ease-in-out;
+} */
+
+/* #down-arrow {
+  width: 35px;
+  height: 35px;
+  transition: all 0.5s ease-in-out;
+} */
+
+/* Skill */
+.inner {
+  padding-top: 20px;
+}
+
+.header {
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 120px;
+  background-color: #2ecc71;
+  border-radius: 2px;
+}
+
+.skill {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-gap: 1rem;
+  padding: 1rem 80px;
+  font-size: 1.2rem;
+}
+
+.skill-box {
+  padding: 1rem;
+  color: #ddd;
+  cursor: pointer;
+}
+
+.skill-tittle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.skill-box:hover > .skill-tittle::after,
+.skill-box:hover > .skill-tittle::before {
+  width: 35px;
+}
+
+.skill-box:hover .img {
+  transform: translateY(-10px);
+}
+
+.skill-tittle h3 {
+  color: #fff;
+  margin: 0.5rem;
+}
+
+.skill-tittle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  width: 0;
+  height: 4px;
+  border-radius: 2px 0 0 2px;
+  background-color: #2ecc71;
+  transition: 0.5s;
+}
+
+.skill-tittle::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 4px;
+  border-radius: 2px 0 0 2px;
+  background-color: #2ecc71;
+  transition: 0.5s;
+}
+
+.img {
+  width: 90px;
+  height: 90px;
+  position: relative;
+  border-radius: 45px;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 90px;
+  background-color: rgba(100, 100, 100, 0.5);
+  border-radius: 45px 0 0 45px;
+}
+
+.skill-icon {
+  width: 50px;
+  z-index: 2;
+}
+/* Akhir skill */
+
+/* Animated */
+::selection {
+  color: #fff;
+  background: #6665ee;
+}
+
+.skill-bars {
+  padding: 25px 30px;
+  width: 600px;
+  background: #3b82f6;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  margin: auto;
+  color: #fff;
+}
+
+.skill-bars .bar {
+  margin: 20px 0;
+}
+
+.skill-bars .bar:first-child {
+  margin-top: 0px;
+}
+
+.skill-bars .bar .info {
+  margin-bottom: 5px;
+}
+
+.skill-bars .bar .info span {
+  font-weight: 500;
+  font-size: 17px;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+
+.skill-bars .bar .progress-line {
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.8);
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.bar .progress-line span {
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #292f42;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.bar .progress-line.html span {
+  width: 60%;
+}
+
+.bar .progress-line.css span {
+  width: 55%;
+}
+
+.bar .progress-line.javascript span {
+  width: 35%;
+}
+
+.bar .progress-line.php span {
+  width: 25%;
+}
+
+.bar .progress-line.mysql span {
+  width: 30%;
+}
+
+.bar .progress-line.python span {
+  width: 25%;
+}
+
+.progress-line span::before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+
+.progress-line span::after {
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: #000;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+
+@keyframes showText2 {
+  100% {
+    opacity: 1;
+  }
+}
+
+.progress-line.html span::after {
+  content: "60%";
+}
+
+.progress-line.css span::after {
+  content: "55%";
+}
+
+.progress-line.javascript span::after {
+  content: "35%";
+}
+
+.progress-line.php span::after {
+  content: "25%";
+}
+
+.progress-line.mysql span::after {
+  content: "30%";
+}
+
+.progress-line.python span::after {
+  content: "25%";
+}
+/* Akhir Animated */
+
+/* Responsive */
+
+@media screen and (max-width: 576px) {
+  #jumbo {
+    width: 125px;
+  }
+
+  #section-1 {
+    padding-top: 40px;
+  }
+
+  h1 {
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .skill {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem 50px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .skill {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 476px) {
+  .skill-bars {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .skill-bars {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .skill-bars {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .card {
+    width: 20rem;
+    margin: auto;
+    height: 12rem;
+  }
+
+  .card img {
+    height: 12rem;
+  }
+
+  .card-body {
+    display: none;
+  }
+}
